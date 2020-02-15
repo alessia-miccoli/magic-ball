@@ -1,8 +1,8 @@
 body{
-  background-color: #616369;
+  background-color: #A3C7DD;
   color: white;
   height: 100vh;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Indie Flower', cursive;
 }
 
 .container{
@@ -14,13 +14,25 @@ body{
   margin-top: 50px;
 }
 
+.answer{
+  word-wrap: break-word;
+}
+
 h1, h2{
   margin: 0;
 }
 
+h1, h2, p{
+  text-align: center;
+}
+
+p{
+  font-size:1.2em;
+}
+
 #externalBall{
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 65%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 60%);
   height: 80vmin;
   width: 80vmin;
   display: flex;
@@ -32,11 +44,37 @@ h1, h2{
 #internalBall{
   border-radius: 50%;
   background-color: white;
-  border: 1px solid lightgrey;
+  border: 2px double lightgrey;
   color: black;
-  height: 45vmin;
-  width: 45vmin;
+  height: 40vmin;
+  width: 40vmin;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration:1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-5px);
+  }
+  
+  20%, 80% {
+    transform: translateX(10px);
+  }
+
+  30%, 50%, 70% {
+    transform: translateX(-8px);
+  }
+
+  40%, 60% {
+    transform: translateX(8px);
+  }
 }
