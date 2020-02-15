@@ -16,7 +16,7 @@ class MagicBall extends React.Component{
   }
 
   generateIndex(){
-    let index =  Math.floor((Math.random() * 14) + 1);
+    let index =  Math.floor((Math.random() * 23) + 1);
 
     while(index === this.state.prevIndex){
       index = Math.floor((Math.random() * 11) + 1);
@@ -60,9 +60,9 @@ class MagicBall extends React.Component{
       return (
       <div className="container">
           <div className={this.state.class} onClick={()=> this.getAnswer()} id="externalBall">
-              <div id="internalBall">
+            <div id="internalBall">
               <p className="answer">{this.state.message}</p>
-              </div>
+            </div>
           </div>
       </div>
       );
