@@ -1,9 +1,17 @@
 body{
   background-color: #B39CAF;
   color: white;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Spartan', sans-serif;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
+}
+
+#App{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .container{
@@ -48,20 +56,12 @@ header{
   padding: 0;
 }
 
-.answer{
-  word-wrap: break-word !important;
-}
-
-h1, h2{
-  margin: 0;
-}
-
-h1, h2, p{
+h1, h4, p{
   text-align: center;
 }
 
 p{
-  font-size:1.2em;
+  font-size:1.2rem;
 }
 
 #externalBall{
@@ -77,7 +77,7 @@ p{
 
 #externalBall:hover{
   transition: 1s ease;
-  cursor: url(./media/icons8-fantasy-64.png), auto;
+  cursor: pointer;
 }
 
 #internalBall{
@@ -115,5 +115,23 @@ p{
 
   40%, 60% {
     transform: translateX(8px);
+  }
+}
+
+@media screen and (max-width: 600px){
+  p{
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
+
+  #externalBall{
+    height: 95vmin;
+    width: 95vmin;
+  } 
+
+  #internalBall{
+    height: 55vmin;
+    width: 55vmin;
+    padding: 1vmin;
   }
 }
